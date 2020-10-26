@@ -57,6 +57,10 @@ class UI {
     }
   }
 
+  clearIDInput() {
+    this.idInput.value = "";
+  }
+
   clearFields() {
     this.titleInput.value = "";
     this.bodyInput.value = "";
@@ -66,6 +70,34 @@ class UI {
     this.idInput.value = data.id;
     this.titleInput.value = data.title;
     this.bodyInput.value = data.body;
+
+    this.changeFormState("edit");
+  }
+
+  changeFormState(type) {
+    if (type === "edit") {
+      this.postSubmit.textContent = "Update Post";
+      this.postSubmit.className = "post-submit btn btn-warning btn-block col-4";
+
+      // cancel button
+      const button = document.createElement("button");
+      button.className = "post-cancel btn btn-light col-4";
+      button.append(document.createTextNode("Cancel Edit"));
+
+      this.postSubmit.insertAdjacentElement("afterend", button);
+    } else {
+      this.postSubmit.textContent = "Post it!";
+      this.postSubmit.className = "post-submit btn btn-success btn-block col-9";
+
+      // remove cancel btn if there
+      if (document.querySelector(".post-cancel")) {
+        document.querySelector(".post-cancel").remove();
+      }
+
+      // clear id from hidden field
+      this.clearIDInput();
+      this.clearFields();
+    }
   }
 }
 
