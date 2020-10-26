@@ -9,7 +9,7 @@
     "build": "webpack --mode production --progress",
     "dev": "webpack --mode development"
   },
-  "author": "Brad Traversy",
+  "author": "Kinjal Raykarmakar",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.3",
