@@ -1,15 +1,25 @@
 .delete {
-    color: #e43f5a;
+  color: #e43f5a;
 }
 
 .delete:hover {
-    color: #fcdab7;
+  color: #fcdab7;
 }
 
 .edit {
-    color: #4BB2F9;
+  color: #4bb2f9;
 }
 
 .edit:hover {
-    color: #fcdab7;
+  color: #fcdab7;
+}
+
+textarea {
+  background-color: #222831 !important;
+  color: #f0f0f0 !important;
+}
+
+input {
+  background-color: #222831 !important;
+  color: #f0f0f0 !important;
 }
