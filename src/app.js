@@ -1,3 +1,7 @@
-let test = (t) => console.log(t);
+// common js module syntax
+const person = require("./mymodule1");
+console.log(person.name);
 
-test("hello");
+// the ES2015 syntax
+import { person } from "./mymodule2";
+console.log(person.name);
