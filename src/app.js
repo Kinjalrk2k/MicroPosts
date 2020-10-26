@@ -37,4 +37,18 @@ function submitPost() {
     .catch((err) => console.log(err));
 }
 
- 
+function deletePost(e) {
+  if (e.target.parentElement.classList.contains("delete")) {
+    const id = e.target.parentElement.dataset.id;
+    if (confirm("Are you sure?")) {
+      http
+        .delete(`http://localhost:3000/posts/${id}`)
+        .then((data) => {
+          ui.showAlert("Post Removed!", "alert alert-success");
+          getPosts();
+        })
+        .catch((err) => console.log(err));
+    }
+  }
+  e.preventDefault();
+}
