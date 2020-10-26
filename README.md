@@ -1,4 +1,5 @@
 # MicroPosts
+A simple Mirco-posting application (A cheap Twitter) using Babel & Webpack along with `json-server` for a fake REST API on a local database!
 
 > This is a part of Brad Traversy's Modern JavaScript From The Beginning on Udemy Section 13. Microposts Project - CRUD Front End (Webpack & Babel)
 
@@ -6,6 +7,7 @@
 - `npm run build` → Build for production (minimized)
 - `npm run dev` → Build for development
 - `npm start` → Start the `webpack-dev-server`
+- `npm run json-server` → Start the `json-server` on *PORT 3000*
 
 # Notes
 - ES2015 Modules
